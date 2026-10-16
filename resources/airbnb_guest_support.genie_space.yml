@@ -1,0 +1,9 @@
+﻿resources:
+  genie_spaces:
+    airbnb_guest_support:
+      title: "Airbnb Guest Support Assistant"
+      warehouse_id: 53f6443c85fc9ef5
+      file_path: ../src/airbnb_guest_support.geniespace.json
+      description: Airbnb Guest Support Assistant
+      parent_path: /Workspace/Users/${workspace.current_user.userName}
+

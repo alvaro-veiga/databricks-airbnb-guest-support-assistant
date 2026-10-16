@@ -1,0 +1,25 @@
+﻿# Backups do Genie Space
+*.backup
+*.bak
+*.geniespace.json.backup
+
+# Credenciais e variáveis de ambiente
+.env
+.env.*
+!.env.example
+.databrickscfg
+
+# Arquivos locais do Databricks
+.databricks/
+.bundle/
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.temp
+
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

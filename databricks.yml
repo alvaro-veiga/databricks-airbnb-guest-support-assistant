@@ -1,0 +1,12 @@
+﻿bundle:
+  name: databricks-airbnb-guest-support-assistant
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://dbc-b1780693-09c8.cloud.databricks.com

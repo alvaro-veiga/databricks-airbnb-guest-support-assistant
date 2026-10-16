@@ -1,0 +1,308 @@
+﻿{
+  "version": 2,
+  "config": {
+    "sample_questions": [
+      {
+        "id": "01f1c6fb7e521d59a02fc61fbb35deed",
+        "question": [
+          "What is the cancellation policy for a booking?"
+        ]
+      },
+      {
+        "id": "01f1c6fb7e731c548c4b9e5d49122055",
+        "question": [
+          "How do I request a refund?"
+        ]
+      },
+      {
+        "id": "01f1c6fb7e961b70904c953332f98f18",
+        "question": [
+          "What are the check-in and check-out times?"
+        ]
+      },
+      {
+        "id": "01f1c6fc904612b89827153ac34e185e",
+        "question": [
+          "Quais reservas foram canceladas e qual o valor reembolsado?"
+        ]
+      },
+      {
+        "id": "01f1c6fc906a10c98cfa2a7ce7a2736e",
+        "question": [
+          "Quantos tickets de suporte est├úo abertos e qual a prioridade de cada um?"
+        ]
+      },
+      {
+        "id": "01f1c6fc908e174abeaa163caa3eb488",
+        "question": [
+          "Qual a receita total por cidade nas reservas conclu├¡das?"
+        ]
+      },
+      {
+        "id": "01f1c6fc90b31b9ab713f78c3e8fa7da",
+        "question": [
+          "Qual o tempo m├®dio de resposta dos agentes de suporte por categoria?"
+        ]
+      }
+    ]
+  },
+  "data_sources": {
+    "tables": [
+      {
+        "identifier": "workspace.default.airbnb_bookings",
+        "column_configs": [
+          {
+            "column_name": "booking_id",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "booking_status",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "cancellation_date",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "cancellation_reason",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "check_in_date",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "check_out_date",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "created_at",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "currency",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "guest_email",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "guest_name",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "guest_rating",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "host_name",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "host_response_time_minutes",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "nightly_price",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "num_guests",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "payment_method",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "property_city",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "property_country",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "property_id",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "property_name",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "refund_amount",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "refund_status",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "total_amount",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "updated_at",
+            "enable_format_assistance": true
+          }
+        ]
+      },
+      {
+        "identifier": "workspace.default.airbnb_support_tickets",
+        "column_configs": [
+          {
+            "column_name": "agent_name",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "booking_id",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "category",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "created_at",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "description",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "guest_email",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "guest_name",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "priority",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "resolution",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "resolved_at",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "response_time_hours",
+            "enable_format_assistance": true
+          },
+          {
+            "column_name": "status",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "subject",
+            "enable_format_assistance": true,
+            "enable_entity_matching": true
+          },
+          {
+            "column_name": "ticket_id",
+            "enable_format_assistance": true
+          }
+        ]
+      }
+    ]
+  },
+  "instructions": {
+    "text_instructions": [
+      {
+        "id": "01f1c6fb7e57130284ddf050b9921524",
+        "content": [
+          "### Airbnb Guest Support Assistant instructions\n",
+          "You are an Airbnb guest support assistant. Answer guest questions about bookings, cancellations, refunds, check-in/check-out, pricing, and general Airbnb support topics. If the answer is not found in the provided data sources, say so clearly and do not make up information. Be helpful, concise, and accurate.\n",
+          "\n",
+          "### Pol├¡tica de cancelamento do Airbnb\n",
+          "Pol├¡tica de cancelamento: Reservas podem ser canceladas gratuitamente at├® 7 dias antes do check-in. Entre 7 dias e 24 horas antes do check-in, reembolso de 50%. Menos de 24 horas antes do check-in, n├úo h├í reembolso. O campo refund_status indica o status do reembolso: approved (aprovado), denied (negado), pending (pendente), not_applicable (n├úo aplic├ível).\n",
+          "\n",
+          "### Hor├írios de check-in e check-out\n",
+          "Check-in ├® a partir das 15h. Check-out at├® ├ás 11h. Late check-out pode ser solicitado ao anfitri├úo. O campo check_in_date e check_out_date na tabela airbnb_bookings representam as datas de check-in e check-out respectivamente.\n",
+          "\n",
+          "### Status de reservas\n",
+          "O campo booking_status na tabela airbnb_bookings pode ter os valores: confirmed (confirmada), cancelled (cancelada), completed (conclu├¡da), pending (pendente). Reservas pending aguardam processamento de pagamento.\n",
+          "\n",
+          "### Categorias de suporte\n",
+          "O campo category na tabela airbnb_support_tickets pode ter os valores: booking, cancellation, refund, payment, check_in, check_out, property_issue, other. O campo status pode ser: open, in_progress, resolved, closed."
+        ]
+      }
+    ],
+    "example_question_sqls": [
+      {
+        "id": "01f1c6fc8d45194ea37169ee790a05bb",
+        "question": [
+          "Quais reservas foram canceladas com reembolso?"
+        ],
+        "sql": [
+          "SELECT booking_id, guest_name, property_name, check_in_date, total_amount, refund_amount, refund_status, cancellation_reason\n",
+          "FROM workspace.default.airbnb_bookings\n",
+          "WHERE booking_status = 'cancelled'\n",
+          "ORDER BY check_in_date DESC"
+        ]
+      },
+      {
+        "id": "01f1c6fc8d451cedaa243aa14cd70557",
+        "question": [
+          "Qual o valor total de reembolsos aprovados?"
+        ],
+        "sql": [
+          "SELECT SUM(refund_amount) AS total_refunded, COUNT(*) AS num_refunds\n",
+          "FROM workspace.default.airbnb_bookings\n",
+          "WHERE refund_status = 'approved'"
+        ]
+      },
+      {
+        "id": "01f1c6fc8d451fd89330ab9b561e503e",
+        "question": [
+          "Quais tickets de suporte est├úo em aberto?"
+        ],
+        "sql": [
+          "SELECT ticket_id, guest_name, category, priority, subject, description, created_at\n",
+          "FROM workspace.default.airbnb_support_tickets\n",
+          "WHERE status IN ('open', 'in_progress')\n",
+          "ORDER BY CASE priority WHEN 'urgent' THEN 1 WHEN 'high' THEN 2 WHEN 'medium' THEN 3 ELSE 4 END, created_at DESC"
+        ]
+      },
+      {
+        "id": "01f1c6fc8d4612b49d0921f71a125a4f",
+        "question": [
+          "Reservas por cidade e valor m├®dio"
+        ],
+        "sql": [
+          "SELECT property_city, COUNT(*) AS num_reservas, AVG(nightly_price) AS preco_medio_noite, SUM(total_amount) AS receita_total\n",
+          "FROM workspace.default.airbnb_bookings\n",
+          "GROUP BY property_city\n",
+          "ORDER BY receita_total DESC"
+        ]
+      }
+    ]
+  }
+}
+
