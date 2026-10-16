@@ -302,6 +302,27 @@
           "ORDER BY receita_total DESC"
         ]
       }
+    ],
+    "join_specs": [
+      {
+        "id": "01f1c995da981512892240958ed9d44c",
+        "left": {
+          "identifier": "workspace.default.airbnb_bookings"
+        },
+        "right": {
+          "identifier": "workspace.default.airbnb_support_tickets"
+        },
+        "sql": [
+          "b.booking_id = t.booking_id",
+          "--rt=FROM_RELATIONSHIP_TYPE_ONE_TO_MANY--"
+        ],
+        "comment": [
+          "JOIN airbnb_bookings Ôåö airbnb_support_tickets"
+        ],
+        "instruction": [
+          "Use LEFT JOIN to keep bookings even when no support ticket exists. Both tables also share guest_name and guest_email, but booking_id is the primary join key."
+        ]
+      }
     ]
   }
 }
